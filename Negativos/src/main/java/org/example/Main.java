@@ -4,8 +4,9 @@ import java.util.Locale;
 import java.util.Scanner;
 import java.util.Vector;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+// Faça um programa que leia um número inteiro positivo N (máximo = 10) e depois N números inteiros
+//e armazene-os em um vetor. Em seguida, mostrar na tela todos os números negativos lidos.
+
 public class Main {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);

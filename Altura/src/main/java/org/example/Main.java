@@ -5,8 +5,10 @@ import Entities.Pessoa;
 import java.util.Locale;
 import java.util.Scanner;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+//Fazer um programa para ler nome, idade e altura de N pessoas, conforme exemplo. Depois, mostrar na
+//tela a altura média das pessoas, e mostrar também a porcentagem de pessoas com menos de 16 anos,
+//bem como os nomes dessas pessoas caso houver.
+
 public class Main {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);

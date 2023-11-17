@@ -1,7 +1,6 @@
 package org.example;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+// Pesquisa de respostas de 20 alunos
 public class Main {
     public static void main(String[] args) {
         int[] vect = {1,2,2,3,2,1,2,3,4,5,2,1,3,4,3,2,3,4,5,14};

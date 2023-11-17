@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+// Faça um programa que leia N números inteiros e armazene-os em um vetor. Em seguida, mostre na
+//tela todos os números pares, e também a quantidade de números pares. 
 public class Main {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
