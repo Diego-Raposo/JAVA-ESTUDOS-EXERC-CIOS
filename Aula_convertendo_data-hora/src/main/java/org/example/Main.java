@@ -1,8 +1,10 @@
 package org.example;
 
+import java.sql.SQLOutput;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
@@ -10,37 +12,31 @@ import java.util.Locale;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+       LocalDate date1 = LocalDate.parse("2022-11-25");
+       LocalDateTime date2 = LocalDateTime.parse("2022-07-30T13:55:54");
+       Instant date3 = Instant.parse("2022-11-21T02:55:54Z");
+       LocalDate date4 = LocalDate.parse("25/12/1999", DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 
-        DateTimeFormatter fmt3 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+       DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+       DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+       DateTimeFormatter fmt3 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss").withZone(ZoneId.systemDefault());
 
-        LocalDate date1 = LocalDate.now();
-        LocalDateTime date2 = LocalDateTime.now();
-        Instant date3 = Instant.now();
-        LocalDate date4 = LocalDate.parse("20/11/2023", fmt2);
-        LocalDateTime date5 = LocalDateTime.parse("2023-11-20T01:30:26");
-        Instant date6 = Instant.parse("2023-11-20T01:30:26Z");
-        Instant date7 = Instant.parse("2023-11-20T01:30:26-03:00");
+       DateTimeFormatter fmt4 = DateTimeFormatter.ISO_DATE;
+       DateTimeFormatter fmt5 = DateTimeFormatter.ISO_DATE_TIME;
+       DateTimeFormatter fmt6 = DateTimeFormatter.ISO_INSTANT;
 
-
-        LocalDate date8 = LocalDate.parse("17/11/2023", DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-
-        LocalDateTime date9 = LocalDateTime.parse("19/12/1999 17:35", DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
-        LocalDate date10 = LocalDate.of(2022, 12, 19);
-        LocalDateTime date11 = LocalDateTime.of(2023,12,13,15,30);
-
-        System.out.println("date1: " + date1);
-        System.out.println("date2: " + date2);
-        System.out.println("date3: " + date3);
-        System.out.println("date4: " + date4.toString());
-        System.out.println("date5: " + date5);
-        System.out.println("date6: " + date6);
-        System.out.println("date7: " + date7);
-        System.out.println("date8: " + date8);
-        System.out.println("date9: " + date9);
-        System.out.println("date10: " + date10);
-        System.out.println("date11: " + date11);
+        System.out.println("Date1: " + date1);
+        System.out.println("Date2: " + date2);
+        System.out.println("Date3: " + date3);
+        System.out.println();
+        System.out.println("Date4: " + date4);
+        System.out.println("Date1: " + date1.format(fmt1));
+        System.out.println("Date2: " + date2.format(fmt2));
+        System.out.println("Date3: " + fmt3.format(date3));
+        System.out.println();
+        System.out.println("Date1: " + date1.format(fmt4));
+        System.out.println("Date2: " + date2.format(fmt5));
+        System.out.println("Date3: " + fmt6.format(date3));
 
     }
 }
